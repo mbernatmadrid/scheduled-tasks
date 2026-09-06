@@ -10,9 +10,11 @@ import datetime as dt
 import pandas as pd
 import random as rd
 import smtplib
+import os
 
-my_email = "m.bernat.madrid@gmail.com"
-password = "MY_PASSWORD"
+my_email = os.environ.get("MY_EMAIL")
+my_password = os.environ.get("MY_PASSWORD")
+
 connection = smtplib.SMTP("smtp.gmail.com")
 connection.starttls()
 connection.login(user=my_email, password=password)
