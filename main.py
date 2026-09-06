@@ -12,7 +12,7 @@ import random as rd
 import smtplib
 
 my_email = "m.bernat.madrid@gmail.com"
-password = ""
+password = "MY_EMAIL"
 connection = smtplib.SMTP("smtp.gmail.com")
 connection.starttls()
 connection.login(user=my_email, password=password)
